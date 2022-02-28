@@ -1,2 +1,2 @@
-# guitar-inventory
 # computools
+Стажировка
