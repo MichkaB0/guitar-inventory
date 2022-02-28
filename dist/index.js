@@ -5,17 +5,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
-const port = 8081; // default port to listen
-// define a route handler for the default home page
+const port = 8081;
 app.get("/", (req, res) => {
-    res.send("Hello world!");
+    res.send("test");
 });
 app.get("/echo", (req, res) => {
-    res.send("/echo working");
-    res.status(1);
+    res.status(200).json({
+        message: '/echo work'
+    });
 });
 app.listen(port, () => {
-    // tslint:disable-next-line:no-console
-    console.log(`server started at http://localhost:${port}`);
+    console.log(`server started at on http://localhost:${port}`);
 });
 //# sourceMappingURL=index.js.map

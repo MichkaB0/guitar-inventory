@@ -1,18 +1,18 @@
 import express from "express";
 const app = express();
-const port = 8081; // default port to listen
+const port = 8081;
 
-// define a route handler for the default home page
-app.get( "/", ( req, res ) => {
-    res.send( "Hello world!" );
-} );
+app.get("/", (req,res) =>{
+    res.send("test")
+});
+
 
 app.get( "/echo", ( req, res ) => {
-    res.send( "/echo working" );
-    res.status(1);
+    res.status(200).json({
+        message: '/echo work'
+    })
 } );
 
 app.listen( port, () => {
-    // tslint:disable-next-line:no-console
-    console.log( `server started at http://localhost:${ port }` );
+    console.log( `server started at on http://localhost:${ port }` );
 } );
